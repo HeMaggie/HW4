@@ -15,26 +15,26 @@ Xcode
 (1)I added two new cpp files. One for triangle, and another one is for plain.<br>
 
 a. Triangle.cpp
-<p>
-Triangle constructor takes in three vertices to define the position of the triangles, and one object color to define its original color.
-It has one funtion "intersect(const Ray &ray)" inherited from the Shape() class.
-Function intersect(const Ray &ray) returns the record of the point where ray hits the triangle. 
-To get a hit on triangle, the hit time t must satisfy the equation: o + t * d = (1 - b1 - b2) * v0 + b1 * v1 + b2 * v2;
-I used Moller Trumbore Algorithm to determine the values of t, b1, and b2. 
-t = (S2.dot(E2))/(S1.dot(E1));
-b1 = (S1.dot(S))/(S1.dot(E1));
-b2 = (S2.dot(ray.direction))/(S1.dot(E1));
-where, E1 = v1 - v0;
-    E2 = v2 - v0;
-    S = ray.origin - v0;
-    S1 = ray.direction.cross(E2);
-    S2 = S.cross(E1);
-When t>=0 && b1 >= 0 && b2 >= 0 && (b1+b2)<=1, the ray will hit on the triangle. 
-Then I record the hit point as:
-        result.t = t;
-        result.position = ray.origin + t * ray.direction;
-        result.normal = (-(v2-v0).cross(v1-v0)).normalized();
-</p>
+
+Triangle constructor takes in three vertices to define the position of the triangles, and one object color to define its original color.<br>
+It has one funtion "intersect(const Ray &ray)" inherited from the Shape() class.<br>
+Function intersect(const Ray &ray) returns the record of the point where ray hits the triangle. <br>
+To get a hit on triangle, the hit time t must satisfy the equation: o + t * d = (1 - b1 - b2) * v0 + b1 * v1 + b2 * v2;<br>
+I used Moller Trumbore Algorithm to determine the values of t, b1, and b2. <br>
+t = (S2.dot(E2))/(S1.dot(E1));<br>
+b1 = (S1.dot(S))/(S1.dot(E1));<br>
+b2 = (S2.dot(ray.direction))/(S1.dot(E1));<br>
+where, E1 = v1 - v0;<br>
+    E2 = v2 - v0;<br>
+    S = ray.origin - v0;<br>
+    S1 = ray.direction.cross(E2);<br>
+    S2 = S.cross(E1);<br>
+When t>=0 && b1 >= 0 && b2 >= 0 && (b1+b2)<=1, the ray will hit on the triangle. <br>
+Then I record the hit point as:<br>
+        result.t = t;<br>
+        result.position = ray.origin + t * ray.direction;<br>
+        result.normal = (-(v2-v0).cross(v1-v0)).normalized();<br>
+
 b. Plain.cpp
 Plain constructor takes in a 3D point, a normal of the plain, and the object color to define its original color.
 It has one funtion "intersect(const Ray &ray)" inherited from the Shape() class.
