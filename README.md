@@ -12,8 +12,10 @@ Xcode
 ### 3. Details:
 1. Problem 1: Add files for New Shapes
 
-(1)I added two new cpp files. One for triangle, and another one is for plain.
+(1)I added two new cpp files. One for triangle, and another one is for plain.<br>
+
 a. Triangle.cpp
+<p>
 Triangle constructor takes in three vertices to define the position of the triangles, and one object color to define its original color.
 It has one funtion "intersect(const Ray &ray)" inherited from the Shape() class.
 Function intersect(const Ray &ray) returns the record of the point where ray hits the triangle. 
@@ -32,7 +34,7 @@ Then I record the hit point as:
         result.t = t;
         result.position = ray.origin + t * ray.direction;
         result.normal = (-(v2-v0).cross(v1-v0)).normalized();
-        
+</p>
 b. Plain.cpp
 Plain constructor takes in a 3D point, a normal of the plain, and the object color to define its original color.
 It has one funtion "intersect(const Ray &ray)" inherited from the Shape() class.
@@ -113,5 +115,5 @@ where, reflectionTimes is the depth of the reflection.
 ![Image of Ambient](Image/P4.png)
 
 ### 5. Reference
-https://learnopengl.com/Lighting/Basic-Lighting
+https://learnopengl.com/Lighting/Basic-Lighting <br>
 https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping
