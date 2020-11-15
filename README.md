@@ -96,9 +96,22 @@ where, reflectionTimes is the depth of the reflection.
 
 ### 4. IMAGES
 
-1. Ambient
+1. Shapes
 
-![Image of Ambient](image/1.Ambient.png)
+![Image of Ambient](Image/P1.png)
 
+2. Shading
+
+![Image of Ambient](Image/P2.png)
+
+3. Shadow
+
+![Image of Ambient](Image/P3.png)
+
+4. Reflection
+
+![Image of Ambient](Image/P4.png)
 
 ### 5. Reference
+https://learnopengl.com/Lighting/Basic-Lighting
+https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping
