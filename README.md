@@ -52,6 +52,7 @@ I record the hit point as:<br>
 
 I add one big sphere, two small spheres, a triangle and one plain to the list of shapes. <br>
 
+--------
 2. Problem 2: Do Phong Shading---Scene::tracer() <br>
 Set lightColor to (1,1,1)<br>
 
@@ -74,6 +75,7 @@ spec = pow(max(reflectedDir.dot(viewDir),0.0),128). //reflectedDir is the reflec
 Apply object color to the result of (diffuse + ambient + specular). <br>
 Each value in the result of (diffuse + ambient + specular) is multiplied by the corresponding value in "objectColor".<br>
 
+----------
 3. Problem 3: Do Shadow---Scene::tracer() <br>
 The logic is: <br>
 If the ray from camera has the closest hit on the same shape as the light has the closest hit, then that pixel will not be in shadow.<br>
@@ -89,6 +91,7 @@ if(hit.shape != r.shape), where r.shape is the shape ray from camera has the clo
 then the result color of this pixel will be black (0,0,0).<br>
 else, the result color will be rendered as what it should be (by phong shading).<br>
 
+----------
 4. Problem 4: Glossy Reflection---Scene::tracer() <br>
 The way to solve this is: Add the color of the object that is hit by the reflected ray of the ray from camrea.<br>
 
