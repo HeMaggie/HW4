@@ -1,8 +1,3 @@
-# HW3
-
-## Mengmei He
-## PSID: 1850021
-
 ### 1. Operaing System:
 MacOS 10.15
 
